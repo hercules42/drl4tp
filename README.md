@@ -1,1 +1,1 @@
-Solving the Thinnest Pat Problem with RL and Hygergarp Neural Networks
+Solving the Thinnest Path Problem with RL and Hygergraph Neural Networks
