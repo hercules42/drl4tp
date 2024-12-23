@@ -1,30 +1,3 @@
-"""
-
-与0407版的修改：
-0. 设置动态调整actor的学习率
-1. x0设置为第一个点
-2. h0由输入为整个图数据的rnn网络得到，而非随机生成
-3. 提升训练速度  （update_mask部分不用循环，光改了这个就提高了十倍！！）
-3.5 删除dynamic的部分
-
-3.9 用greedy算法取代critic
-4. 多头注意力（两个注意力模块的权重不一样）
-test on 10000: 20 -- 7.51(两个注意力模块比例2：1)
-                    xx(两个注意力模块比例5：1)
-               50 -- 12.68 (critic)
-
-#TODO
-
-5.  修改点的表示
-6.  用hgnn
-7. 用除了actor-critic的其他算法
-8. 每个step时还应考虑影响的是新增的点还是已有的点
-9. 用求解器求最优解，和现在的对比一下
-10. attention中不经过context，注意力分数作为概率；
-    或者其他方法求context，因为目前context并没有考虑当前步之前选择的点 (可以用dynamic来表示点的状态，作为context)
-
-"""
-
 import os
 import time
 import argparse
